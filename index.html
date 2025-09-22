@@ -3,29 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desi Tv</title>
+    <title>StreamVerse - Live TV</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Desi Tv</h1>
+        <h1>StreamVerse</h1>
         <p>Your Universe of Live Television</p>
+        <!-- NEW: Search Bar -->
+        <div class="search-container">
+            <input type="search" id="search-bar" placeholder="Search for any channel...">
+        </div>
     </header>
 
     <div class="container">
-        <div class="countries-list" id="countries-list">
+        <h2>Countries</h2>
+        <div class="filter-bar" id="countries-list">
             <!-- Countries will be loaded here by JavaScript -->
         </div>
 
-        <!-- NEW: Loader element -->
-        <div class="loader" id="loader"></div>
-
-        <div class="channels-grid" id="channels-grid">
-            <!-- Channels will be loaded here by JavaScript -->
+        <!-- NEW: Category Filters -->
+        <h2>Categories</h2>
+        <div class="filter-bar" id="categories-list">
+            <!-- Categories will be loaded here by JavaScript -->
         </div>
+
+        <div class="loader" id="loader"></div>
+        <div class="channels-grid" id="channels-grid">
+            <!-- Channels will be loaded here -->
+        </div>
+        <!-- NEW: No Results Message -->
+        <p id="no-results" style="display:none; text-align:center; font-size: 1.2em;">No channels found. Try a different search or filter.</p>
     </div>
 
-    <!-- Important: Load data first, then the script -->
+    <!-- NEW: Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StreamVerse. All Rights Reserved.</p>
+            <nav>
+                <a href="about.html">About Us</a> | 
+                <a href="dmca.html">DMCA</a>
+            </nav>
+        </div>
+    </footer>
+
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
