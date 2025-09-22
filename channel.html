@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Live Stream Player</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        :root {
+            --primary-color: #3a7bfd;
+            --background-color: #121212;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-color: #e0e0e0;
+        }
+        body { 
+            margin: 0; 
+            background-color: var(--background-color); 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            height: 100vh; 
+            color: var(--text-color); 
+            font-family: 'Poppins', sans-serif;
+            padding-top: 20px;
+        }
+        #video-container { 
+            width: 90%; 
+            max-width: 1000px;
+        }
+        #video-player { 
+            width: 100%; 
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        h1 { 
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .controls-bar {
+            padding: 15px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .control-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(58, 123, 253, 0.3);
+        }
+        #quality-levels button {
+            background-color: #555;
+        }
+        #quality-levels button.active {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="channel-name">Loading Channel...</h1>
+    <div id="video-container">
+        <video id="video-player" controls autoplay></video>
+        <div class="controls-bar">
+            <button id="reload-btn" class="control-btn">Reload</button>
+            <button id="pip-btn" class="control-btn">Picture-in-Picture</button>
+            <div id="quality-levels"></div>
+        </div>
+    </div>
+    
+    <!-- Player JavaScript (same as before) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('video-player');
+            const channelNameEl = document.getElementById('channel-name');
+            const reloadBtn = document.getElementById('reload-btn');
+            const pipBtn = document.getElementById('pip-btn');
+            const qualityLevelsContainer = document.getElementById('quality-levels');
+            const params = new URLSearchParams(window.location.search);
+            const streamUrl = params.get('stream');
+            const channelName = params.get('name');
+            if (channelName) {
+                channelNameEl.innerText = `${channelName}`;
+            }
+            let hls;
+            function loadStream() {
+                if (streamUrl) {
+                    if (Hls.isSupported()) {
+                        hls = new Hls();
+                        hls.loadSource(streamUrl);
+                        hls.attachMedia(video);
+                        hls.on(Hls.Events.MANIFEST_PARSED, (event, data) => {
+                            video.play();
+                            qualityLevelsContainer.innerHTML = '';
+                            if (data.levels.length > 1) {
+                                const autoBtn = document.createElement('button');
+                                autoBtn.className = 'control-btn active';
+                                autoBtn.innerText = 'Auto';
+                                autoBtn.onclick = () => { hls.currentLevel = -1; updateActiveQualityButton(); };
+                                qualityLevelsContainer.appendChild(autoBtn);
+                                data.levels.forEach((level, index) => {
+                                    const btn = document.createElement('button');
+                                    btn.className = 'control-btn';
+                                    btn.innerText = `${level.height}p`;
+                                    btn.onclick = () => { hls.currentLevel = index; updateActiveQualityButton(btn); };
+                                    qualityLevelsContainer.appendChild(btn);
+                                });
+                            }
+                        });
+                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                        video.src = streamUrl;
+                        video.addEventListener('loadedmetadata', () => { video.play(); });
+                    }
+                } else {
+                    channelNameEl.innerText = "Error: Stream URL not found.";
+                }
+            }
+            function updateActiveQualityButton(activeButton) {
+                document.querySelectorAll('#quality-levels button').forEach(b => b.classList.remove('active'));
+                if (activeButton) { activeButton.classList.add('active'); } 
+                else { qualityLevelsContainer.querySelector('button').classList.add('active'); }
+            }
+            reloadBtn.addEventListener('click', () => {
+                if (hls) { hls.destroy(); }
+                loadStream();
+            });
+            pipBtn.addEventListener('click', async () => {
+                if (!document.pictureInPictureElement) {
+                    if (document.pictureInPictureEnabled) {
+                        try { await video.requestPictureInPicture(); } catch (error) { console.error('PiP failed:', error); }
+                    } else { alert('Your browser does not support Picture-in-Picture.'); }
+                } else { await document.exitPictureInPicture(); }
+            });
+            loadStream();
+        });
+    </script>
+</body>
+</html>
