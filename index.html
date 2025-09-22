@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My TV Garden - Modern UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>StreamVerse</h1>
+        <p>Your Universe of Live Television</p>
+    </header>
+
+    <div class="container">
+        <div class="countries-list" id="countries-list">
+            <!-- Countries will be loaded here by JavaScript -->
+        </div>
+
+        <!-- NEW: Loader element -->
+        <div class="loader" id="loader"></div>
+
+        <div class="channels-grid" id="channels-grid">
+            <!-- Channels will be loaded here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Important: Load data first, then the script -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
