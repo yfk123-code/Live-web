@@ -12,6 +12,12 @@ const tvData = {
             stream_url: "https://indiatv.live247stream.com/indiatv/live/playlist.m3u8",
             category: "News"
         },
+        {
+            name: "Shemaroo Bollywood",
+            logo: "https://i.postimg.cc/g2k886KH/id6gqvb-V4-T-logos.png",
+            stream_url: "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8",
+            category: "Movies"
+        },
        {
             name: "B4U Kadak",
             logo: "https://jiotvimages.cdn.jio.com/dare_images/images/B4U_Kadak.png",
