@@ -18,6 +18,85 @@ const tvData = {
             stream_url: "https://cdnb4u.wiseplayout.com/B4U_Kadak/SD216/SD216.m3u8",
             category: "Movies" // <-- Nayi Property
         },
+        {
+            name: "SET HD",
+            logo: "https://i.postimg.cc/jC0dMyzk/Sony-HD.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011671%2FSETHD%2Fmaster_900.m3u8",
+            category: "Entertainment" // <-- Nayi Property
+        },
+        {
+            name: "Sony Marathi HD",
+            logo: "https://i.postimg.cc/0yZKyHGk/Sony-Marathi-SD.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011740%2FSonyMarathi%2Fmaster_900.m3u8",
+            category: "Entertainment" // <-- Nayi Property
+        },
+        {
+            name: "Sony SAB HD",
+            logo: "https://i.postimg.cc/7Pg6LWDF/Sony-SAB-HD.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011749%2FSABHD%2Fmaster_900.m3u8
+",
+            category: "Entertainment" // <-- Nayi Property
+        },
+        {
+            name: "Sony Pal HD",
+            logo: "https://i.postimg.cc/qMR9FNm1/Sony-Pal.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011741%2FSonyPalSD%2Fmaster_900.m3u8",
+            category: "Entertainment" // <-- Nayi Property
+        },
+        {
+            name: "Sony Yay HD",
+            logo: "https://i.postimg.cc/Y0V8ZC9P/Sony-Yay-Hindi.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011746%2FSonyYaySD%2Fmaster_900.m3u8",
+            category: "Kids" // <-- Nayi Property
+        },
+        {
+            name: "Sony Max HD",
+            logo: "https://i.postimg.cc/9fjgc0p5/Sony-Max-HD.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011670%2FSonyMaxhd%2Fmaster_900.m3u8",
+            category: "Movies" // <-- Nayi Property
+        },
+        {
+            name: "Sony Max",
+            logo: "https://i.postimg.cc/NjvkHVrR/SET-MAX.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011745%2FSonyMaxSD%2Fmaster_900.m3u8",
+            category: "Movies" // <-- Nayi Property
+        },
+        {
+            name: "Sony Max 2",
+            logo: "https://i.postimg.cc/pTSDX1Hh/Sony-MAX2.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011908%2FMAX2%2Fmaster_900.m3u8",
+            category: "Movies" // <-- Nayi Property
+        },
+        {
+            name: "Sony WAH",
+            logo: "https://i.postimg.cc/xCX6Rmjm/Sony-Wah.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011906%2FSonyWah%2Fmaster_900.m3u8",
+            category: "Movies" // <-- Nayi Property
+        },
+        {
+            name: "Sony BBC Earth HD",
+            logo: "https://i.postimg.cc/KjXDDsHX/Sony-BBC-Earth-HD.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011907%2FSonyBBCEarthHD%2Fmaster_900.m3u8",
+            category: "Infotainment" // <-- Nayi Property
+        },
+        {
+            name: "Sony Sports Ten 3",
+            logo: "https://i.postimg.cc/02Pp5mgC/Ten-3.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2020592%2FTEN3SD%2Fmaster_900.m3u8",
+            category: "Sports" // <-- Nayi Property
+        },
+        {
+            name: "Sony Sports Ten 3 HD",
+            logo: "https://i.postimg.cc/g2BRKTxM/Ten3-HD.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2020591%2FTEN3HD%2Fmaster_900.m3u8",
+            category: "Sports" // <-- Nayi Property
+        },
+         {
+            name: "Sony Sports Ten 1",
+            logo: "https://i.postimg.cc/Wp6ky3Dq/Ten-1.png",
+            stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011739%2FTEN1SD%2Fmaster_900.m3u8",
+            category: "Sports" // <-- Nayi Property
+        },
        {
             name: "9xm",
             logo: "https://jiotvimages.cdn.jio.com/dare_images/images/9XM.png",
