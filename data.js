@@ -20,7 +20,7 @@ const tvData = {
         },
         {
             name: "B4U Movies",
-            logo: "https://jiotvimages.cdn.jio.com/dare_images/images/B4U_Kadak.png",
+            logo: "https://i.postimg.cc/Mpkbk46v/107-1070786-b4u-movies-logo-png.jpg",
             stream_url: "https://cdnb4u.wiseplayout.com/B4U_Movies/SD360/SD360.m3u8",
             category: "Movies"
         },
