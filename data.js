@@ -19,6 +19,12 @@ const tvData = {
             category: "Movies"
         },
         {
+            name: "B4U Movies",
+            logo: "https://jiotvimages.cdn.jio.com/dare_images/images/B4U_Kadak.png",
+            stream_url: "https://cdnb4u.wiseplayout.com/B4U_Movies/SD360/SD360.m3u8",
+            category: "Movies"
+        },
+        {
             name: "SET HD",
             logo: "https://i.postimg.cc/jC0dMyzk/Sony-HD.png",
             stream_url: "https://freelivtv.xyz/proxy/m3u8.php?url=https%3A%2F%2Fdish.slivcdn.com%2Fhls%2Flive%2F2011671%2FSETHD%2Fmaster_900.m3u8",
