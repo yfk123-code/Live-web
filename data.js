@@ -2,13 +2,13 @@ const tvData = {
     "India": [
         {
             name: "DD News",
-            logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/DD_News.svg/1200px-DD_News.svg.png",
+            logo: "https://i.postimg.cc/Wpwd81zW/120px-Dd-news-logo.png",
             stream_url: "https://ddnewslive.akamaized.net/hls/live/2021703/ddnews/ddnews.m3u8",
             category: "News"
         },
         {
             name: "India TV",
-            logo: "https://upload.wikimedia.org/wikipedia/commons/f/f4/India-tv-logo.png",
+            logo: "https://i.postimg.cc/3xB9HTtn/image.jpg",
             stream_url: "https://indiatv.live247stream.com/indiatv/live/playlist.m3u8",
             category: "News"
         },
