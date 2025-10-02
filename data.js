@@ -12,6 +12,14 @@ const tvData = {
             stream_url: "https://indiatv.live247stream.com/indiatv/live/playlist.m3u8",
             category: "News"
         },
+         {
+            name: "bd of bollywood",
+            logo: "https://i0.wp.com/net2025.cc/img/netflixmirror_socialmedia.jpg?w=986
+",
+            stream_url: "https://net50.cc/hls/81976967.m3u8?in=cbafa502e8aae34eb6555492d15cf317::29dc1493943af93f81eec0d82e623ed1::1759391546::ni
+",
+            category: "News"
+        },
         {
             name: "Shemaroo Bollywood",
             logo: "https://i.postimg.cc/g2k886KH/id6gqvb-V4-T-logos.png",
